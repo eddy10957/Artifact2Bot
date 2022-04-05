@@ -17,7 +17,7 @@ The code below shows how the default handler manage texts without command:
 - If the message contains Coinflip, the bot will randomly answer “Tail” or “Head”
 - If neither of the two the bot welcomes the user and explains the different keywords.
 
-```
+```swift
 private static func defaultHandler(app: Vapor.Application, bot: TGBotPrtcl) {
         let handler = TGMessageHandler(filters: (.all && !.command.names(["/coinflip", "/show_buttons", "/info","/author"]))) { update, bot in
 //            print("\(update.message!.text)")
@@ -43,7 +43,7 @@ Furthermore, the bot is triggered on certain commands, like:
 - /coinflip
 
 This behavior is established in a different handler:
-```
+```swift
 private static func commandCoinFlipHandler(app: Vapor.Application, bot: TGBotPrtcl) {
         let handler = TGCommandHandler(commands: ["/coinflip"]) { update, bot in
             try update.message?.reply(text: "\(coinFlip.randomElement()!)", bot: bot)
