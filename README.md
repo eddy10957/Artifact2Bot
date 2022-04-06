@@ -66,4 +66,4 @@ private static func commandCoinFlipHandler(app: Vapor.Application, bot: TGBotPrt
     }
 ```
 Commands make it easier to understand the capabilities of a bot. If you register a set of commands at the botFather on telegram, on the chat view will appear a menu button with all the different commands that were registered, so a new user can easily figure out what he can do with the bot.
-[Try it out](https://t.me/artifact2_bot)
+#[Try it out](https://t.me/artifact2_bot)
