@@ -11,7 +11,7 @@ import telegram_vapor_bot
 
 func routes(_ app: Application) throws {
 
-    app.post("5163865318:AAEbz537tPN4bmW3Gkb3Lfp1ltApLCf0JP8") { (request) -> String in
+    app.post("//INSERT TOKEN HERE") { (request) -> String in
         do {
             let update: TGUpdate = try request.content.decode(TGUpdate.self)
             try TGBot.shared.connection.dispatcher.process([update])
